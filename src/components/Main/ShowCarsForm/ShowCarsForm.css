@@ -1,0 +1,79 @@
+section {
+    height: 70vh;
+    background-image: url('../../../assets/images/photo-1529310356902-e45c5cd4e0d3.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--color-blue);
+}
+
+.booking-container { 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100%;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 10px;
+    margin: 100px 30px; 
+    max-width: 1450px;
+    padding: 20px 25px; 
+}
+
+.form-container p {
+    font-family: 'HelveticaNowBold';
+    font-size: 20px; 
+}
+
+form label {
+    font-size: 13px;
+    font-family: 'HelveticaNowBold';
+    margin-bottom: 3px;
+}
+
+.select-office, .select-datetime {
+    margin-bottom: 30px;
+}
+
+.btn-cars-container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 30px;
+}
+
+.btn-cars {
+    background-color: var(--color-yellow);
+    color: var(--color-blue);
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-family: 'HelveticaNowBold';
+    border: none; 
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgba(201, 201, 207, 1);
+}
+
+.pickup-office, .return-office, .pickup-date, .return-date {
+    width: 100%;
+   
+}
+
+.input-text, .input-date, .input-time {
+    background-color: inherit;
+    width: 100%;
+    outline: none;
+    border: none; 
+    color: var(--color-blue); 
+}
+
