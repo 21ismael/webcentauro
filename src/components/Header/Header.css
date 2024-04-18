@@ -1,24 +1,32 @@
 .header {
-    height: 8vh;
-    background-color: var(--color-blue);
+    height: 65px;
+    width: 100%;
+    position: fixed;
+    top: 0; 
+    background-image: linear-gradient(to right, var(--color-blue), var(--color-blue), black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
 }
 
-.logo, .logowhite {
+.logo,
+.logowhite {
     width: 180px;
 }
 
-.navbar { 
+.navbar {
     height: 100%;
     display: fixed;
 }
 
-.container {
-    max-width: 1500px;
+.navbar-toggler,
+.btn-close {
+    box-shadow: none !important;
+    border: none;
 }
 
-.navbar-toggler, .btn-close {
-    box-shadow: none !important;
-    border: none; 
+.navbar-toggler {
+    padding-left: 0;
 }
 
 .navbar-toggler-icon {
@@ -32,7 +40,8 @@
 
 .offcanvas {
     background-color: white;
-    padding: 30px 0 0 50px; 
+    padding: 30px 0 0 50px;
+    z-index: 9999; 
 }
 
 .offcanvas {
@@ -47,7 +56,7 @@
 ul {
     font-size: 22px;
     font-family: 'HelveticaNowBold';
-    
+
 }
 
 ul .nav-link {
@@ -57,4 +66,3 @@ ul .nav-link {
 ul .nav-link:hover {
     color: var(--color-yellow);
 }
-
