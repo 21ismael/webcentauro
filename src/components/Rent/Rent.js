@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import WebService from '../../services/WebService';
-import Car from '../Main/Car/Car';
+import Car from '../Car/Car';
+import RentInfo from './RentInfo/RentInfo';
 import './Rent.css';
-import { click } from '@testing-library/user-event/dist/click';
 
 export default function Rent() {
 
@@ -19,6 +19,8 @@ export default function Rent() {
     });
 
     const [availableCars, setAvailableCars] = useState([]);
+
+    const [selectedCar, setSelectedCar] = useState({});
 
     useEffect(() => {
         if (formData && formData.pickupOffice) {
@@ -53,10 +55,21 @@ export default function Rent() {
     }, [availableCars]);
 
     const handleCarClick = (car) => {
+        setSelectedCar(car);
         console.log("Car clicked:\n", car);
+
+        var rentInfo = document.getElementById('rent-info');
+        if (rentInfo) {
+            rentInfo.style.display = 'block';
+            rentInfo.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+        }
+        
+        window.scrollBy(0, -1000);
     };
 
+
     return <>
+        <RentInfo selectedCar={selectedCar} pickupDate={formData.pickupDate} returnDate={formData.returnDate} />
         <section className='container'>
             <div className='question'>
                 <p>WHICH CAR DO YOU WANT TO DRIVE?</p>
@@ -75,3 +88,17 @@ export default function Rent() {
         </section>
     </>
 }
+
+
+
+
+/*var cars = document.querySelectorAll('.car');
+       cars.forEach(function (car) {
+           car.classList.remove('selected');
+       });*/
+// Añadir la clase 'selected' al coche clickeado
+//car.classList.add('selected');
+
+// Obtener el ID del coche clickeado
+
+// Mostrar los detalles del coche clickeado

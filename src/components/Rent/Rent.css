@@ -1,12 +1,11 @@
-section {
+/*section {
    margin-top: 65px; 
-   z-index: -2; 
-}
+}*/
 
 .question p {
    margin: 0;
    padding: 20px 0; 
    font-family: 'Condensed';
-   font-size: 30px;
+   font-size: 35px;
    color: var(--color-blue);
 }

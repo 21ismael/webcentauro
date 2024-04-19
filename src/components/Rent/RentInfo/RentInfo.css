@@ -1,0 +1,49 @@
+#rent-info {
+    width: calc(100% - 23px);
+    margin-top: 95px;
+    padding: 30px 40px;
+    display: flex;
+    border: 3px solid var(--color-blue);
+    border-radius: 10px;
+    /*background-color: var(--color-yellow);*/
+    color: white;
+    outline-offset: 3px;
+    outline: 4px solid var(--color-yellow);
+    background: linear-gradient(135deg, var(--color-blue) 50%, var(--color-blue) 100%);
+
+}
+
+.row {
+    width: 100%;
+}
+
+.car-info p {
+    font-family: 'HelveticaNowBold';
+    line-height: 1.2;
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.car-info .car-brand-model {
+    font-size: 54px;
+    text-shadow: 2px 2px var(--color-yellow);
+}
+
+.car-image-dailyrate img{
+    width: 450px;
+}
+
+.car-info .daily-rate {
+    position: relative;
+    right: 50px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 50px !important;
+    text-shadow: 2px 2px var(--color-yellow);
+}
+
+.day {
+    font-size: 25px;
+}

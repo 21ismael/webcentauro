@@ -7,6 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
+    z-index: 1;
 }
 
 .logo,
@@ -41,7 +42,11 @@
 .offcanvas {
     background-color: white;
     padding: 30px 0 0 50px;
-    z-index: 9999; 
+    z-index: 2;
+}
+
+.offcanvas-backdrop {
+    z-index: 1;
 }
 
 .offcanvas {
