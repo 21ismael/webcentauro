@@ -108,6 +108,7 @@ export default function RentInfo({ selectedCar, reservation }) {
                         <p className='daily-rate'>{selectedCar?.fleet?.dailyRate}€<span className='day'>/day</span> </p>
                     </div>
                     <div className='date-office-info'>
+                        <p>Price: {selectedCar?.fleet?.dailyRate} x {carPrice.days} = {carPrice.price}€</p>
                         <p>{selectedCar?.office?.name}</p>
                         <p>From {shortDate(reservation.pickupDate)} to {shortDate(reservation.returnDate)}</p>
                     </div>

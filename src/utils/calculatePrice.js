@@ -7,11 +7,13 @@ export default function calculatePrice(pickupDate, returnDate, dailyRate) {
     // Calcula la diferencia en días entre las fechas de recogida y devolución
     const differenceInDays = Math.round(Math.abs((startDate - endDate) / ONE_DAY));
 
-    const totalCost = differenceInDays * dailyRate;
+    let totalCost = differenceInDays * dailyRate;
+
+    totalCost = totalCost.toFixed(2);
 
     let carPrice = {
         days: differenceInDays, 
-        price: totalCost
+        price: parseFloat(totalCost)
     }
 
     return carPrice;
