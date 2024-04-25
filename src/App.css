@@ -47,3 +47,7 @@ body {
 .container {
     max-width: 1500px;
 }
+
+.row {
+    margin: 0; 
+}

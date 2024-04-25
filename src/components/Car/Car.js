@@ -3,7 +3,7 @@ import './Car.css';
 
 export default function Car({ car, onClick, selected }) {
     return <>
-        <article key={car.id} className="col-sm-12 col-md-6 col-lg-4" onClick={onClick}>
+        <article key={car.id} className="col-12 col-md-6 col-xl-4" onClick={onClick}>
             <div className={`card ${selected}`}>
                 <p><span className='car-brand-model'>{car.fleet.brand} {car.fleet.model}</span><br /><span>or similar</span></p>
                 <img src={car.fleet.image} />

@@ -1,0 +1,84 @@
+.section-offices {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.section-offices h2 {
+    margin: 0;
+    padding: 20px 12px;
+    font-family: 'Condensed';
+    font-size: 40px;
+    color: var(--color-blue);
+    text-align: center;
+}
+
+.section-offices p {
+    font-size: 20px;
+    color: var(--color-blue);
+    text-align: center;
+    font-weight: bolder;
+}
+
+.cards {
+    padding: 30px 0;
+}
+
+.card-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; 
+    width: 300px;
+    height: 400px;
+}
+
+.section-offices .card {
+   width: 100%;
+   border: none;
+   display: flex;
+   justify-content: end;
+   padding: 20px;
+   box-shadow: 0px 1px 15px lightgrey;
+   opacity: 0.9;
+   box-shadow: rgba(7, 53, 144, 0.55) 0px -100px 36px -28px inset;
+}
+
+.section-offices .card:hover {
+    opacity: 1;
+}
+
+.section-offices .card p {
+    color: white;
+    line-height: 1;
+}
+
+.section-offices .card .country {
+    font-size: 35px;
+}
+
+.spain-card {
+    background-image: url('../../../assets/images/countries-cards/spain.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+.portugal-card {
+    background-image: url('../../../assets/images/countries-cards/portugal.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.italy-card {
+    background-image: url('../../../assets/images/countries-cards/italy.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.greece-card {
+    background-image: url('../../../assets/images/countries-cards/greece.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

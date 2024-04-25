@@ -10,37 +10,14 @@ export default function Rent() {
     const webService = new WebService();
 
     const location = useLocation();
-    const formData = location.state && location.state.formData;
-
-    const [data, setData] = useState({
-        officeId: null,
-        pickupDate: formData.pickupDate,
-        returnDate: formData.returnDate
-    });
+    const reservation = location.state && location.state.reservation;
 
     const [availableCars, setAvailableCars] = useState([]);
-
     const [selectedCar, setSelectedCar] = useState({});
 
     useEffect(() => {
-        if (formData && formData.pickupOffice) {
-            webService.getOfficeByName(formData.pickupOffice)
-                .then(office => {
-                    setData(prevData => ({
-                        ...prevData,
-                        officeId: office.id
-                    }));
-                })
-                .catch(error => {
-                    console.error('Error fetching office:', error);
-                });
-
-        }
-    }, [formData]);
-
-    useEffect(() => {
-        if (data.officeId && data.pickupDate && data.returnDate) {
-            webService.getAvailableCars(data.officeId, data.pickupDate, data.returnDate)
+        if (reservation && reservation.officeId && reservation.pickupDate && reservation.returnDate) {
+            webService.getAvailableCars(reservation.officeId, reservation.pickupDate, reservation.returnDate)
                 .then(response => {
                     setAvailableCars(response);
                 })
@@ -48,15 +25,18 @@ export default function Rent() {
                     console.error('Error fetching available cars:', error);
                 });
         }
-    }, [data]);
+    }, [reservation]);
 
-    useEffect(() => {
+    /*useEffect(() => {
         console.log(availableCars);
-    }, [availableCars]);
+    }, [availableCars]);*/
 
     const handleCarClick = (car) => {
         setSelectedCar(car);
         console.log("Car clicked:\n", car);
+
+        reservation.carId = car.id; 
+        console.log(reservation);
 
         var rentInfo = document.getElementById('rent-info');
         if (rentInfo) {
@@ -64,13 +44,13 @@ export default function Rent() {
             rentInfo.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
         }
         
-        window.scrollBy(0, -1000);
+        window.scrollBy(0, -10000);
     };
 
 
     return <>
-        <RentInfo selectedCar={selectedCar} pickupDate={formData.pickupDate} returnDate={formData.returnDate} />
-        <section className='container'>
+        <RentInfo selectedCar={selectedCar} reservation={reservation} />
+        <section className='container cars'>
             <div className='question'>
                 <p>WHICH CAR DO YOU WANT TO DRIVE?</p>
             </div>
@@ -91,14 +71,4 @@ export default function Rent() {
 
 
 
-
-/*var cars = document.querySelectorAll('.car');
-       cars.forEach(function (car) {
-           car.classList.remove('selected');
-       });*/
-// Añadir la clase 'selected' al coche clickeado
-//car.classList.add('selected');
-
-// Obtener el ID del coche clickeado
-
-// Mostrar los detalles del coche clickeado
+//

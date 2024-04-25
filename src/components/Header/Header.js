@@ -30,13 +30,13 @@ export default function Header() {
                   <a className="nav-link" href="/" onClick={nav}>Rent a Car</a>
                 </li>
                 <li className="nav-item nav-link">
-                  Fleet
-                </li>
-                <li className="nav-item nav-link">
                   Offices
                 </li>
                 <li className="nav-item nav-link">
                   Services
+                </li>
+                <li className="nav-item nav-link">
+                  Log Out
                 </li>
               </ul>
             </div>

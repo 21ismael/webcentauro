@@ -1,61 +1,35 @@
 .section-show-cars {
-    height: auto;
     width: 100%;
-    background-color: var(--color-blue);
+    background-image: linear-gradient(to right, var(--color-blue), var(--color-blue), black);
+    color: var(--color-blue);
+    margin-top: 65px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 20px 30px 50px 30px; 
+    font-family: 'HelveticaNowBold';
     /*background-image: url('../../../assets/images/photo-1529310356902-e45c5cd4e0d3.avif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;*/
-    background-image: linear-gradient(to right, var(--color-blue), var(--color-blue), black);
-    color: var(--color-blue);
-    margin-top: 65px;
+    
 }
 
-.booking-container { 
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    height: 100%;
-}
-
-.form-container {
+.show-cars-form {
     background-color: white;
     border-radius: 10px;
-    margin: 20px 30px 50px 30px; 
     max-width: 1450px;
-    padding: 20px 25px; 
+    padding: 25px; 
 }
 
-.form-container p {
-    font-family: 'HelveticaNowBold';
+.show-cars-form p {
     font-size: 20px; 
 }
 
-form label {
+label {
     font-size: 13px;
-    font-family: 'HelveticaNowBold';
     margin-bottom: 3px;
-}
-
-.btn-cars-container {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-.btn-cars {
-    background-color: #ffc72d;
-    color: var(--color-blue);
-    border-radius: 10px;
-    padding: 9.5px 30px;
-    font-family: 'HelveticaNowBold';
-    border: none; 
-    width: 100%;
-    font-size: 18px;
-}
-
-.btn-cars:hover {
-    background-color: #fdbd0b;
+    font-weight: bolder;
 }
 
 .input-container {
@@ -78,5 +52,31 @@ form label {
     outline: none;
     border: none; 
     color: var(--color-blue); 
+    font-weight: bolder;
 }
 
+.btn-cars-container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.btn-cars {
+    background-color: #ffc72d;
+    color: var(--color-blue);
+    border-radius: 10px;
+    padding: 9.5px 30px;
+    border: none; 
+    width: 100%;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.btn-cars:hover {
+    background-color: #fdbd0b;
+}
+
+/*a {
+    color: inherit;
+    text-decoration: none;
+}*/

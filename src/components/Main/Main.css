@@ -1,0 +1,21 @@
+.spring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.spring img {
+    width: 100%;
+    padding: 50px 15px;
+}
+
+.parallax {
+    width: 100%;
+    height: 30vh;
+    background-image: url('../../assets/images/photos/photo-1544791578-98a7557b1933.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 400px 0;
+}
