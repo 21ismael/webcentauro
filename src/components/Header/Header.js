@@ -27,7 +27,7 @@ export default function Header() {
             <div className="offcanvas-body">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" href="/" onClick={nav}>Rent a Car</a>
+                  <a className="nav-link" href="/" onClick={nav}>Rent a CarH</a>
                 </li>
                 <li className="nav-item nav-link">
                   Offices
